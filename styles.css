@@ -1,0 +1,288 @@
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+
+    background-color: #0f172a;
+    margin: 0;
+    padding: 0;
+}
+
+.header {
+    background-color: #111827;
+    padding: 20px;
+    box-shadow: #5eead4 0px 1px 4px;
+    margin-bottom: 0.625rem;
+    overflow: hidden;
+    margin: auto;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+}
+
+h1 {
+    color: #5eead4;
+    font-size: 4rem;
+    margin-top: 0;
+    font-family: 'Tilt Warp', cursive;
+
+}
+
+.players {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+
+}
+
+label {
+
+    color: #5eead4;
+    display: inline-block;
+    margin-right: 0.625rem;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 600;
+    font-size: 1.3rem;
+    font-family: 'Tilt Warp', cursive;
+
+}
+
+input[type="text"] {
+    padding: 0.313px;
+    border-radius: 5px;
+    border: 1px solid #5eead4;
+    margin-right: 0.625rem;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1rem;
+    font-family: 'Tilt Warp', cursive;
+    background-color: #0f172a;
+    color: #f8fafc;
+}
+
+button {
+    background-color: #5eead4;
+    color: #0f172a;
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-family: 'Tilt Warp', cursive;
+    font-size: 18px;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
+}
+
+button:hover {
+    border-color: white;
+}
+
+#start-btn i.fa-solid {
+    margin-right: 5px;
+}
+
+.button-div {
+    display: flex;
+    justify-content: center;
+}
+
+.game {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    justify-content: center;
+    align-content: center;
+    grid-gap: 10px;
+    width: 18.75rem;
+    height: 18.75rem;
+    margin: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    visibility: hidden;
+}
+
+.show1 {
+    visibility: visible;
+}
+
+.remove {
+    visibility: hidden;
+}
+
+.cell {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 4em;
+    font-family: 'Tilt Warp', cursive;
+    font-weight: bold;
+    color: #111827;
+    background-color: #5eead4;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+
+
+.cell:active {
+    transform: scale(0.95);
+}
+
+.winning-message {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    justify-content: center;
+    align-items: center;
+    color: #5eead4;
+    font-size: 5rem;
+    flex-direction: column;
+    font-family: 'Tilt Warp', cursive;
+}
+
+.winning-message button {
+    font-size: 3rem;
+    border: 1px solid black;
+    padding: .25em .5em;
+    cursor: pointer;
+}
+
+.winning-message button:hover {
+    color: white;
+    border-color: white;
+}
+
+.winning-message.show {
+    display: flex;
+}
+
+.footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    color: #5eead4;
+    font-family: 'Tilt Warp', cursive;
+    font-size: 24px;
+    text-align: center;
+    width: 100%;
+    padding: 5px;
+}
+
+.footer a {
+    color: #5eead4;
+    font-size: 30px;
+    font-family: 'Tilt Warp', cursive;
+
+}
+
+.github-icon:hover .fa-brands {
+    transform: rotate(360deg);
+    transition: transform 0.5s ease-in-out;
+}
+
+@media (max-width: 768px) {
+    .cell {
+        font-size: 2.5em;
+    }
+}
+
+@media (max-width: 480px) {
+    .cell {
+        font-size: 2em;
+    }
+}
+
+@media (max-width: 768px) {
+    .winning-message {
+        font-size: 3rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .winning-message {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .footer {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 480px) {
+    .footer {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 768px) {
+    .github-icon:hover .fa-brands {
+        transform: none;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .header {
+        padding: 10px;
+        font-size: 16px;
+    }
+}
+
+/* For devices with screen width between 768px and 1024px */
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+    .header {
+        padding: 15px;
+        font-size: 18px;
+    }
+}
+
+/* For devices with screen width above 1024px */
+@media screen and (min-width: 1024px) {
+    .header {
+        padding: 20px;
+        font-size: 20px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    label {
+        font-size: 1rem;
+    }
+
+    input[type="text"] {
+        font-size: 0.8rem;
+    }
+}
+
+/* For devices with a screen width of 480px or less */
+@media screen and (max-width: 480px) {
+    label {
+        font-size: 0.8rem;
+    }
+
+    input[type="text"] {
+        font-size: 0.6rem;
+    }
+}
